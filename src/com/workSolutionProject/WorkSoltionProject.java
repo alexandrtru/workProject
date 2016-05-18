@@ -1,29 +1,16 @@
 package com.workSolutionProject;
 
-import com.workSolutionProject.Сontroller.GeneralSceneController;
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-
-import java.net.URL;
-import java.util.ResourceBundle;
+import com.workSolutionProject.Controller.Controller;
+import com.workSolutionProject.Model.Model;
+import com.workSolutionProject.View.GeneralForm;
+import com.workSolutionProject.View.View;
 
 /**
  * Created by user on 08.05.2016.
  */
-public class WorkSoltionProject extends Application {
-    @Override
-    public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("./View/generalScene.fxml"));
-        primaryStage.setTitle("General scene");
-        primaryStage.setScene(new Scene(root));
-        primaryStage.show();
-    }
+public class WorkSoltionProject {
 
-
-    public static void main(String[] args) {
-        launch(args);
+    public static void main(String[] args) throws Exception {
+        Controller controller = new Controller(new Model(), new View());
     }
 }
