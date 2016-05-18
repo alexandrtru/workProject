@@ -1,5 +1,8 @@
 package com.workSolutionProject.View;
 
+import com.workSolutionProject.Helpers.Events.DeviceOperationEvent;
+import com.workSolutionProject.Helpers.Events.DeviceOperationListener;
+
 import javax.swing.table.AbstractTableModel;
 
 /**
@@ -10,6 +13,12 @@ public class View {
 
     public void showGeneralForm(){
         generalForm.setVisible(true);
+        generalForm.addDeviceOperationLisetner(new DeviceOperationListener(){
+            @Override
+            public void onDeviceOperation(DeviceOperationEvent ev) {
+                new EditDeviceForm();
+            }
+        });
     }
 
     public void setDeviceAbstractTable(AbstractTableModel abstractTable){

@@ -22,7 +22,10 @@
             <constraints>
               <tabbedpane title="Devices"/>
             </constraints>
-            <properties/>
+            <properties>
+              <autoscrolls value="false"/>
+              <inheritsPopupMenu value="false"/>
+            </properties>
             <border type="none"/>
             <children>
               <toolbar id="f37ff">
@@ -36,21 +39,48 @@
                   <opaque value="false"/>
                   <requestFocusEnabled value="true"/>
                   <rollover value="false"/>
+                  <visible value="true"/>
                 </properties>
                 <clientProperties>
                   <JToolBar.isRollover class="java.lang.Boolean" value="false"/>
                 </clientProperties>
                 <border type="none"/>
-                <children/>
+                <children>
+                  <component id="e10b7" class="javax.swing.JButton" binding="addDeviceButton">
+                    <constraints/>
+                    <properties>
+                      <text value="add"/>
+                    </properties>
+                  </component>
+                  <component id="af905" class="javax.swing.JButton" binding="editDeviceButton">
+                    <constraints/>
+                    <properties>
+                      <enabled value="false"/>
+                      <text value="edit"/>
+                    </properties>
+                  </component>
+                  <component id="30a2b" class="javax.swing.JButton" binding="deleteDeviceButton">
+                    <constraints/>
+                    <properties>
+                      <enabled value="false"/>
+                      <text value="del"/>
+                    </properties>
+                  </component>
+                </children>
               </toolbar>
-              <component id="846b" class="javax.swing.JTable" binding="devicesTableView">
+              <scrollpane id="e9c0a">
                 <constraints>
-                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                    <preferred-size width="150" height="50"/>
-                  </grid>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties/>
-              </component>
+                <border type="none"/>
+                <children>
+                  <component id="846b" class="javax.swing.JTable" binding="devicesTableView">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                </children>
+              </scrollpane>
             </children>
           </grid>
         </children>
